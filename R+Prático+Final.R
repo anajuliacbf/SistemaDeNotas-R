@@ -68,25 +68,29 @@ df <- data.frame(nota, idade)
 
 #ordenando
 library(dplyr)
-df_ordenado_idades <- df[order(df$idades), ]
+df_ordenado_idades <- df[order(df$idade), ]
 
 #obtendo a média das notas para 50% menores idades
 df_menor <- head(df_ordenado_idades, nrow(df_ordenado_idades)/2)
-media_menor_idade_notas <-mean(df_menor$notas)
+media_menor_idade_notas <-mean(df_menor$nota)
 
 #obtendo a média das notas para 50% maiores idades
 df_maior <- tail(df_ordenado_idades, nrow(df_ordenado_idades)/2)
-media_maior_idade_notas <-mean(df_maior$notas)
+media_maior_idade_notas <-mean(df_maior$nota)
 
 #Há relação entre a idade e a nota?
-cat(" A diferença percentual entre as maiores notas e as menores notas é de:", ((8.5/5.3)-1)*100)
+cat(" A diferença percentual entre as maiores notas e as menores notas é de:", ((8.5/5.3)-1)*100,"%")
 
-cat(" A diferença percentual entre as maiores notas e as menores idades é de:", ((10.8/9.8)-1)*100)
+cat(" A diferença percentual entre as maiores idades e as menores idades é de:", ((10.8/9.8)-1)*100,"%")
 
-cv_notas <- (sd(notas) / mean(notas)) * 100
-cv_idades <- (sd(idades) / mean(idades)) * 100
-cat("O coeficiente de variação das notas é:", cv_notas, "|")
-cat("O coeficiente de variação das idades é:", cv_idades)
+#É notório que, neste caso, a diferença percentual das notas é muito maior do que a das idades
+
+cv_notas <- (sd(nota) / mean(nota)) * 100
+cv_idades <- (sd(idade) / mean(idade)) * 100
+cat("O coeficiente de variação das notas é:", cv_notas,"%|")
+cat("O coeficiente de variação das idades é:", cv_idades,"%")
+
+#Portanto, observa-se que as notas variam quase 5 vezes mais do que as idades
 
 #Medida avançada
-cor(idades,notas, method = "pearson")
+cor(idade,nota, method = "pearson")
