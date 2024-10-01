@@ -44,13 +44,13 @@ idades <- function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t) {
   #Calcular a mediana
   if(tamanho_lista%%2==0){
     idade_mediana <- mean(idades_ordenadas[(tamanho_lista/2)+0:1])
-    cat(" A mediana das notas é:", idade_mediana, "|")
+    cat(" A mediana das idades é:", idade_mediana, "|")
   } else {
     idade_mediana <- idades_ordenadas[(tamanho_lista+1)/2]
-    cat(" A mediana das notas é:", idade_mediana, "|")
+    cat(" A mediana das idades é:", idade_mediana, "|")
   }
   
-  #Para 50% menores notas e maiores notas - média
+  #Para 50% menores e maiores idades - média
   menores_idades_media <- mean(idades_ordenadas[0:(tamanho_lista/2)])
   maiores_idades_media <- mean(idades_ordenadas[((tamanho_lista/2)+1):tamanho_lista])
   cat(" A média das 50% menores idades é:", menores_idades_media, "|")
