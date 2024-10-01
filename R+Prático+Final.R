@@ -87,7 +87,7 @@ cat(" A diferença percentual entre as maiores idades e as menores idades é de:
 
 cv_notas <- (sd(nota) / mean(nota)) * 100
 cv_idades <- (sd(idade) / mean(idade)) * 100
-cat("O coeficiente de variação das notas é:", cv_notas,"%|")
+cat("O coeficiente de variação das notas é:", cv_notas,"% |")
 cat("O coeficiente de variação das idades é:", cv_idades,"%")
 
 #Portanto, observa-se que as notas variam quase 5 vezes mais do que as idades
