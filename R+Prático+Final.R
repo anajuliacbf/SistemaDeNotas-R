@@ -61,10 +61,10 @@ idades <- function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t) {
 idades(10,11,12,9,10,11,10,10,10,10,11,11,10,9,10,10,11,11,10,10)
 
 #trazendo os vetores para fora das funções
-notas <- c(8,7,7,7,7,8,5,2,4,4,10,10,10,10,4,6,7,7,7,8)
-idades <- c(10,11,12,9,10,11,10,10,10,10,11,11,10,9,10,10,11,11,10,10)
+nota <- c(8,7,7,7,7,8,5,2,4,4,10,10,10,10,4,6,7,7,7,8)
+idade <- c(10,11,12,9,10,11,10,10,10,10,11,11,10,9,10,10,11,11,10,10)
 
-df <- data.frame(notas, idades)
+df <- data.frame(nota, idade)
 
 #ordenando
 library(dplyr)
